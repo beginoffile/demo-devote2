@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05BE6A572BD7499300D1EE64 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BE6A562BD7499300D1EE64 /* Constants.swift */; };
 		05E0FA442BD1F068000173F0 /* DemoDevoteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E0FA432BD1F068000173F0 /* DemoDevoteApp.swift */; };
 		05E0FA462BD1F068000173F0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E0FA452BD1F068000173F0 /* ContentView.swift */; };
 		05E0FA482BD1F06A000173F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05E0FA472BD1F06A000173F0 /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		05BE6A562BD7499300D1EE64 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		05E0FA402BD1F068000173F0 /* DemoDevote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoDevote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05E0FA432BD1F068000173F0 /* DemoDevoteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoDevoteApp.swift; sourceTree = "<group>"; };
 		05E0FA452BD1F068000173F0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -65,12 +67,12 @@
 				05E0FA622BD1F314000173F0 /* Info.plist */,
 				05E0FA432BD1F068000173F0 /* DemoDevoteApp.swift */,
 				05E0FA5D2BD1F231000173F0 /* View */,
+				05E0FA612BD1F280000173F0 /* Model */,
 				05E0FA602BD1F25F000173F0 /* Style */,
 				05E0FA5F2BD1F24D000173F0 /* Utility */,
 				05E0FA5E2BD1F244000173F0 /* Extension */,
 				05E0FA5C2BD1F225000173F0 /* Sound */,
 				05E0FA472BD1F06A000173F0 /* Assets.xcassets */,
-				05E0FA612BD1F280000173F0 /* Model */,
 				05E0FA492BD1F06A000173F0 /* Preview Content */,
 			);
 			path = DemoDevote;
@@ -112,6 +114,7 @@
 		05E0FA5F2BD1F24D000173F0 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				05BE6A562BD7499300D1EE64 /* Constants.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05BE6A572BD7499300D1EE64 /* Constants.swift in Sources */,
 				05E0FA4D2BD1F06A000173F0 /* Persistence.swift in Sources */,
 				05E0FA462BD1F068000173F0 /* ContentView.swift in Sources */,
 				05E0FA442BD1F068000173F0 /* DemoDevoteApp.swift in Sources */,
