@@ -25,7 +25,7 @@
 		05BE6A562BD7499300D1EE64 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		05D951E52BE08F0100261192 /* HideKeyboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideKeyboardExtension.swift; sourceTree = "<group>"; };
 		05D951E72BE315F800261192 /* BackgroundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundImageView.swift; sourceTree = "<group>"; };
-		05E0FA402BD1F068000173F0 /* DemoDevote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoDevote.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		05E0FA402BD1F068000173F0 /* DemoDevote2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoDevote2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05E0FA432BD1F068000173F0 /* DemoDevoteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoDevoteApp.swift; sourceTree = "<group>"; };
 		05E0FA452BD1F068000173F0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		05E0FA472BD1F06A000173F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -60,7 +60,7 @@
 		05E0FA412BD1F068000173F0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				05E0FA402BD1F068000173F0 /* DemoDevote.app */,
+				05E0FA402BD1F068000173F0 /* DemoDevote2.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -144,9 +144,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		05E0FA3F2BD1F068000173F0 /* DemoDevote */ = {
+		05E0FA3F2BD1F068000173F0 /* DemoDevote2 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 05E0FA532BD1F06A000173F0 /* Build configuration list for PBXNativeTarget "DemoDevote" */;
+			buildConfigurationList = 05E0FA532BD1F06A000173F0 /* Build configuration list for PBXNativeTarget "DemoDevote2" */;
 			buildPhases = (
 				05E0FA3C2BD1F068000173F0 /* Sources */,
 				05E0FA3D2BD1F068000173F0 /* Frameworks */,
@@ -156,9 +156,9 @@
 			);
 			dependencies = (
 			);
-			name = DemoDevote;
+			name = DemoDevote2;
 			productName = DemoDevote;
-			productReference = 05E0FA402BD1F068000173F0 /* DemoDevote.app */;
+			productReference = 05E0FA402BD1F068000173F0 /* DemoDevote2.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -176,7 +176,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 05E0FA3B2BD1F068000173F0 /* Build configuration list for PBXProject "DemoDevote" */;
+			buildConfigurationList = 05E0FA3B2BD1F068000173F0 /* Build configuration list for PBXProject "DemoDevote2" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -189,7 +189,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				05E0FA3F2BD1F068000173F0 /* DemoDevote */,
+				05E0FA3F2BD1F068000173F0 /* DemoDevote2 */,
 			);
 		};
 /* End PBXProject section */
@@ -409,7 +409,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		05E0FA3B2BD1F068000173F0 /* Build configuration list for PBXProject "DemoDevote" */ = {
+		05E0FA3B2BD1F068000173F0 /* Build configuration list for PBXProject "DemoDevote2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				05E0FA512BD1F06A000173F0 /* Debug */,
@@ -418,7 +418,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		05E0FA532BD1F06A000173F0 /* Build configuration list for PBXNativeTarget "DemoDevote" */ = {
+		05E0FA532BD1F06A000173F0 /* Build configuration list for PBXNativeTarget "DemoDevote2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				05E0FA542BD1F06A000173F0 /* Debug */,
