@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		05BE6A572BD7499300D1EE64 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BE6A562BD7499300D1EE64 /* Constants.swift */; };
+		05D951E62BE08F0100261192 /* HideKeyboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D951E52BE08F0100261192 /* HideKeyboardExtension.swift */; };
+		05D951E82BE315F800261192 /* BackgroundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D951E72BE315F800261192 /* BackgroundImageView.swift */; };
 		05E0FA442BD1F068000173F0 /* DemoDevoteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E0FA432BD1F068000173F0 /* DemoDevoteApp.swift */; };
 		05E0FA462BD1F068000173F0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E0FA452BD1F068000173F0 /* ContentView.swift */; };
 		05E0FA482BD1F06A000173F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05E0FA472BD1F06A000173F0 /* Assets.xcassets */; };
@@ -21,6 +23,8 @@
 
 /* Begin PBXFileReference section */
 		05BE6A562BD7499300D1EE64 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		05D951E52BE08F0100261192 /* HideKeyboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideKeyboardExtension.swift; sourceTree = "<group>"; };
+		05D951E72BE315F800261192 /* BackgroundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundImageView.swift; sourceTree = "<group>"; };
 		05E0FA402BD1F068000173F0 /* DemoDevote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoDevote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05E0FA432BD1F068000173F0 /* DemoDevoteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoDevoteApp.swift; sourceTree = "<group>"; };
 		05E0FA452BD1F068000173F0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -100,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				05E0FA452BD1F068000173F0 /* ContentView.swift */,
+				05D951E72BE315F800261192 /* BackgroundImageView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -107,6 +112,7 @@
 		05E0FA5E2BD1F244000173F0 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				05D951E52BE08F0100261192 /* HideKeyboardExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -209,7 +215,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				05BE6A572BD7499300D1EE64 /* Constants.swift in Sources */,
+				05D951E82BE315F800261192 /* BackgroundImageView.swift in Sources */,
 				05E0FA4D2BD1F06A000173F0 /* Persistence.swift in Sources */,
+				05D951E62BE08F0100261192 /* HideKeyboardExtension.swift in Sources */,
 				05E0FA462BD1F068000173F0 /* ContentView.swift in Sources */,
 				05E0FA442BD1F068000173F0 /* DemoDevoteApp.swift in Sources */,
 				05E0FA502BD1F06A000173F0 /* DemoDevote.xcdatamodeld in Sources */,
