@@ -10,10 +10,11 @@ import CoreData
 
 struct ContentView: View {
     // MARK: - PROPERTY
+    
+    @AppStorage("isDarkMode") private var isDarkMode: Bool = false
     @State var task: String = ""
-    private var isButtonDisable: Bool{
-        task.isEmpty
-    }
+    @State private var showNewTaskItem: Bool = false
+    
     
     // MARK: - FETCHING DATA
     @Environment(\.managedObjectContext) private var viewContext
@@ -23,29 +24,8 @@ struct ContentView: View {
         animation: .default)
     private var items: FetchedResults<Item>
     
+   
     // MARK: - FUNCTIONS
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
-            newItem.task = task
-            newItem.completion = false
-            newItem.id = UUID()
-
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
-            
-            task=""
-            hideKeyboard()
-        }
-    }
-
     private func deleteItems(offsets: IndexSet) {
         withAnimation {
             offsets.map { items[$0] }.forEach(viewContext.delete)
@@ -65,29 +45,57 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             ZStack {
+                // MARK: - MAIN VIEW
                 VStack {
-                    VStack(spacing: 16){
-                        TextField("New Task", text: $task)
-                            .padding()
+                    //: MARK: . HEADER
+                    
+                    HStack(spacing: 30, content: {
+                        // TITLE
+                        Text("Devote")
+                            .font(.system(.largeTitle, design: .rounded))
+                            .fontWeight(.heavy)
+                            .padding(.leading, 4)
+                        Spacer()
+                        // EDIT BUTTON
+                        EditButton()
+                            .font(.system(size: 16, weight: .semibold, design: .rounded))
+                            .padding(.horizontal,10)
+                            .frame(minWidth: 70, minHeight: 24)
                             .background(
-                                Color(UIColor.systemGray6)
-                            )
-                            .cornerRadius(10)
+                                Capsule().stroke(Color.white, lineWidth: 2))
+                        // APPEARANCE BUTTON
                         Button(action: {
-                            addItem()
+                            // TOGGLE APPAREANCE
+                            isDarkMode.toggle()
                         }, label: {
-                            Spacer()
-                            Text("Save")
-                            Spacer()
+                            Image(systemName: isDarkMode ? "sun.max" : "moon.circle")
+                                .resizable()
+                                .frame(width: 24, height: 24)
+                                .font(.system(.title, design: .rounded))
                         })
-                        .disabled(isButtonDisable)
-                        .padding()
-                        .font(.headline)
-                        .foregroundColor(.white)
-                        .background(isButtonDisable ? Color.gray : Color.pink)
-                        .cornerRadius(10)
-                    } //: VSTACK
+                    })
                     .padding()
+                    .foregroundColor(.white)
+                    
+                    Spacer(minLength: 80)
+                    //: MARK: - NEW TASK BUTTON
+                    Button(action: {
+                        showNewTaskItem = true
+                    }, label: {
+                        Image(systemName: "plus.circle")
+                            .font(.system(size: 30, weight: .semibold, design: .rounded))
+                        Text("New Task")
+                            .font(.system(size: 24, weight: .bold, design: .rounded))
+                    })
+                    .foregroundColor(.white)
+                    .padding(.horizontal, 20)
+                    .padding(.vertical, 15)
+                    .background(
+                        LinearGradient(gradient: Gradient(colors: [Color.pink, Color.blue]), startPoint: .leading, endPoint: .trailing)
+                        .clipShape(Capsule())
+                    )
+                    .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.25), radius: 8, x: 0.0, y: 4.0)
+                   
                     List {
                         ForEach(items) { item in
                             NavigationLink {
@@ -116,19 +124,31 @@ struct ContentView: View {
                     .background(Color.clear)
 //                    .listRowBackground(Color.clear)
                 } //: VSTACK
+                
+                // MARK: - NEW TASK ITEM
+                if showNewTaskItem{
+                    BlankView()
+                        .onTapGesture {
+                            withAnimation() {
+                                showNewTaskItem = false
+                            }
+                        }
+                    NewTaskItemView(isShowing: $showNewTaskItem)
+                }
             } //: ZTACK
             
             .navigationBarTitle("Daily Tasks", displayMode: .large)
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-                //                ToolbarItem(placement: .navigationBarTrailing) {
-                //                    Button(action: addItem) {
-                //                        Label("Add Item", systemImage: "plus")
-                //                    }
-                //                }
-            } //: TOOLBAR
+//            .toolbar {
+//                ToolbarItem(placement: .navigationBarTrailing) {
+//                    EditButton()
+//                }
+//                //                ToolbarItem(placement: .navigationBarTrailing) {
+//                //                    Button(action: addItem) {
+//                //                        Label("Add Item", systemImage: "plus")
+//                //                    }
+//                //                }
+//            } //: TOOLBAR
+            .navigationBarHidden(true)
             .background(
                 BackgroundImageView()
             )
